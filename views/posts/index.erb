@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Welcome to my blog!</h1>
+        <a href="/most_commentde"><b>Most Commented</b></a>
+        <ul>
+            <% @posts.each do |post| %>
+                <li>
+                <h2><a href="/posts/<%= post.id %>"><%= post.title %></a>
+                    <span style="color:blue"><%= pretty_date(post.created_at) %></span>
+                </h2>
+                </li>
+            <% end %>
+        </ul>
+    </body>
+</html>
